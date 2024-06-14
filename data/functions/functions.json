@@ -1,1 +1,18 @@
-[]
+
+  {
+    "basic": {
+      "id": "func-basic",
+      "position": 1,
+      "label": "Basic",
+      "items": [
+        {
+          "id": "exampleFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Run NER",
+          "nodeColor": "red",
+          "settings": {}
+        }
+      ]
+    }
+  }

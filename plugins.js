@@ -68,10 +68,19 @@
 /** Module exports */
 module.exports = {
     "core": {
-        "panes": [ 'canvas', 'table', 'admin', 'help' ],
-        "actions": [ 'email', 'file', 'image', 'text', 'video', 'web', 'json' ],
-        "functions": [ ]
+        "panes": ['canvas', 'table', 'admin', 'help'],
+        "actions": ['email', 'file', 'image', 'text', 'video', 'web', 'json'],
+        "functions": []
     },
-    "paneOrder": [ 'canvas', 'table', 'admin', 'help' ],
-    "plugins": [ ]
+    "paneOrder": ['canvas', 'table', 'admin', 'help'],
+    "plugins": [{
+        'name': 'cogni-sketch-contrib-example',
+        'routes': [
+            { 'root': '/example', 'path': 'example.js' }
+        ],
+        'panes': [ 'example' ],
+        'stylesheets': [ 'example.css' ],
+        'functions': [ 'exampleFunction' ]
+    }
+    ]
 };
