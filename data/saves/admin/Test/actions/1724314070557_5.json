@@ -1,0 +1,24 @@
+{
+ "time": "2024-08-22T08:07:50.524Z",
+ "project": "Test",
+ "name": "moveNode",
+ "nodes": [
+  {
+   "node": "obj_17",
+   "pos": {
+    "x": -48,
+    "y": 302
+   }
+  }
+ ],
+ "extraInfo": {
+  "nodes": [
+   "obj_17"
+  ]
+ },
+ "startPos": {
+  "x": 252,
+  "y": 195
+ },
+ "server_ts": 1724314070557
+}

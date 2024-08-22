@@ -1,0 +1,12 @@
+{
+ "time": "2024-08-22T08:45:29.390Z",
+ "project": "Test",
+ "name": "canvas:deleteSelected",
+ "extraInfo": {
+  "nodes": [
+   "obj_21"
+  ],
+  "links": []
+ },
+ "server_ts": 1724316329400
+}

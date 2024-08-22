@@ -1,0 +1,18 @@
+{
+ "time": "2024-08-22T08:43:17.502Z",
+ "project": "Test",
+ "name": "createEmpty",
+ "nodes": [
+  {
+   "node": "obj_20",
+   "pos": {
+    "x": 267,
+    "y": 264
+   }
+  }
+ ],
+ "extraInfo": {
+  "type": "text"
+ },
+ "server_ts": 1724316197518
+}

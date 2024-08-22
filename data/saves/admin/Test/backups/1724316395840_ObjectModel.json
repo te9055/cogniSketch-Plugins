@@ -1,6 +1,6 @@
 {
  "project": "Test",
- "server_ts": 1724316397748,
+ "server_ts": 1724316395839,
  "paletteName": "default",
  "general": {
   "uid": 23,
@@ -48,8 +48,8 @@
    "selected": false,
    "hide": false,
    "pos": {
-    "x": 351,
-    "y": 199
+    "x": 267,
+    "y": 264
    },
    "linkRefs": [],
    "data": {

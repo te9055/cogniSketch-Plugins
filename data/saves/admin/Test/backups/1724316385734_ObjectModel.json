@@ -1,9 +1,9 @@
 {
  "project": "Test",
- "server_ts": 1724316397748,
+ "server_ts": 1724316385732,
  "paletteName": "default",
  "general": {
-  "uid": 23,
+  "uid": 22,
   "viewBox": {
    "left": 94,
    "top": 163,
@@ -38,18 +38,18 @@
     "label": "test"
    }
   },
-  "obj_22": {
-   "uid": "obj_22",
-   "created": "2024-08-22T08:46:35.834Z",
+  "obj_21": {
+   "uid": "obj_21",
+   "created": "2024-08-22T08:45:22.127Z",
    "user": "admin",
    "type": "text",
    "mode": "empty",
    "expanded": 1,
-   "selected": false,
+   "selected": true,
    "hide": false,
    "pos": {
-    "x": 351,
-    "y": 199
+    "x": 167,
+    "y": 194
    },
    "linkRefs": [],
    "data": {

@@ -1,0 +1,15 @@
+{
+ "time": "2024-08-22T08:09:51.100Z",
+ "project": "Test",
+ "name": "canvas:selectNode",
+ "nodes": [
+  {
+   "node": "obj_18",
+   "pos": {
+    "x": 442,
+    "y": 136
+   }
+  }
+ ],
+ "server_ts": 1724314191107
+}
