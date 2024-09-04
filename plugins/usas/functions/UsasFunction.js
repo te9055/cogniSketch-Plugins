@@ -1,7 +1,7 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode} from "/javascripts/private/core/create.js";
+import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
 
 const TYPE_NAME = 'usasFunction';
 
@@ -25,12 +25,16 @@ async function runExample(context) {
             }
         ).then(result => {
             let tableres = convToHTML(result)
-            let title =  document.createElement("p").innerText = "USAS";
+            let title = document.createElement("p").innerText = "USAS";
             tableres.prepend(title)
             let nodeType = getPalette().getItemById('text');
-            createNewEmptyNode(nodeType, tableres.outerHTML, {x: pos.x + 200,
-                y: pos.y})
+            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+                x: pos.x - 200,
+                y: pos.y + 150
             })
+            let srcNode = context.node
+            createNewLink(srcNode, desNode)
+        })
 }
 
 function convToHTML(jsonData) {
