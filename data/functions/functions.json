@@ -6,7 +6,15 @@
       "label": "Basic",
       "items": [
         {
-          "id": "exampleFunction",
+          "id": "usasFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Run USAS",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "nerFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
           "label": "Run NER",

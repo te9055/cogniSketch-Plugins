@@ -81,6 +81,23 @@ module.exports = {
         'panes': [ 'example' ],
         'stylesheets': [ 'example.css' ],
         'functions': [ 'exampleFunction' ]
-    }
+    }, {
+            'name': 'usas',
+            'routes': [
+                { 'root': '/usas', 'path': 'usas.js' }
+            ],
+            'panes': [ 'usas' ],
+            'stylesheets': [ 'usas.css' ],
+            'functions': [ 'usasFunction' ]
+        },
+        {
+            'name': 'ner',
+            'routes': [
+                { 'root': '/ner', 'path': 'ner.js' }
+            ],
+            'panes': [ 'ner' ],
+            'stylesheets': [ 'ner.css' ],
+            'functions': [ 'nerFunction' ]
+        }
     ]
 };

@@ -20,8 +20,8 @@ import {putText} from "/javascripts/interface/graphics.js"
 
 
 
-const TYPE_NAME = 'exampleFunction';
-const URL_EXAMPLE = '/example/';
+const TYPE_NAME = 'nerFunction';
+const URL_EXAMPLE = '/ner/';
 
 registerNodeExecuteCallback(TYPE_NAME, runExample);
 
@@ -45,7 +45,7 @@ registerNodeExecuteCallback(TYPE_NAME, runExample);
 async function runExample(context) {
     let textProperty = context.node.getPropertyNamed('text');
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/usas", {
+    await fetch("http://127.0.0.1:5000/ner", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
