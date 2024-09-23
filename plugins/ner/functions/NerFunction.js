@@ -1,9 +1,3 @@
-/**
- * @file The client-side capabilities of the 'example' palette function.
- * @author Dave Braines
- * @status In-progress
- **/
-
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
@@ -46,25 +40,33 @@ async function runExample(context) {
 }
 
 function convToHTML(jsonData) {
+
     let table =  document.createElement("table");
-    let cols = Object.keys(jsonData[0]);
+    //let cols = Object.keys(jsonData[0]);
+    let cols = ["Word", "Translation", "NER", "Frequency"];
+
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
     cols.forEach((item) => {
         let th = document.createElement("th");
         th.innerText = item; // Set the column name as the text of the header cell
+
         tr.appendChild(th); // Append the header cell to the header row
 
     });
 
     thead.appendChild(tr); // Append the header row to the header
-    table.append(tr) // Append the header to the table
+
+    table.append(tr); // Append the header to the table
     jsonData.forEach((item) => {
+
         let tr = document.createElement("tr");
 
+        console.log(item);
         // Get the values of the current object in the JSON data
         let vals = Object.values(item);
+        console.log(vals);
         vals.forEach((elem) => {
             let td = document.createElement("td");
             td.innerText = elem; // Set the value as the text of the table cell

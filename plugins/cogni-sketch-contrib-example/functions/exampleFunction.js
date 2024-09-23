@@ -15,8 +15,8 @@ import {getPalette} from "/javascripts/private/state.js";
 import {showToast} from "/javascripts/interface/log.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
 import {computeNewNodePosFrom} from "/javascripts/private/util/coords.js";
-import {createNewEmptyNode} from "/javascripts/private/core/create.js";
 import {putText} from "/javascripts/interface/graphics.js"
+import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
 
 
 
@@ -45,7 +45,7 @@ registerNodeExecuteCallback(TYPE_NAME, runExample);
 async function runExample(context) {
     let textProperty = context.node.getPropertyNamed('text');
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/usas", {
+    await fetch("http://127.0.0.1:5000/sentiment", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -58,13 +58,17 @@ async function runExample(context) {
                 return data.output;
             }
         ).then(result => {
+            let title = document.createElement("p").innerText = "Sentiment Analysis";
             let tableres = convToHTML(result)
-            console.log(result)
-            //let strresult = JSON.stringify(result);
+            tableres.prepend(title)
             let nodeType = getPalette().getItemById('text');
-            console.log(nodeType)
-            createNewEmptyNode(nodeType, tableres.outerHTML, pos)
+            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+                x: pos.x,
+                y: pos.y - 75
             })
+            let srcNode = context.node
+            createNewLink(srcNode, desNode)
+        })
 }
 
 function convToHTML(jsonData) {

@@ -6,6 +6,14 @@
       "label": "Basic",
       "items": [
         {
+          "id": "exampleFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Run Sentiment Analysis",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
           "id": "usasFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
