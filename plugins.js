@@ -74,13 +74,13 @@ module.exports = {
     },
     "paneOrder": ['canvas', 'table', 'admin', 'help'],
     "plugins": [{
-        'name': 'cogni-sketch-contrib-example',
+        'name': 'sentiment',
         'routes': [
-            { 'root': '/example', 'path': 'example.js' }
+            { 'root': '/sentiment', 'path': 'sentiment.js' }
         ],
-        'panes': [ 'example' ],
-        'stylesheets': [ 'example.css' ],
-        'functions': [ 'exampleFunction' ]
+        'panes': [ 'sentiment' ],
+        'stylesheets': [ 'sentiment.css' ],
+        'functions': [ 'sentimentFunction' ]
     }, {
             'name': 'usas',
             'routes': [
@@ -98,6 +98,15 @@ module.exports = {
             'panes': [ 'ner' ],
             'stylesheets': [ 'ner.css' ],
             'functions': [ 'nerFunction' ]
+        },
+        {
+            'name': 'translate',
+            'routes': [
+                { 'root': '/translate', 'path': 'translate.js' }
+            ],
+            'panes': [ 'translate' ],
+            'stylesheets': [ 'translate.css' ],
+            'functions': [ 'translateFunction' ]
         }
     ]
 };

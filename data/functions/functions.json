@@ -6,10 +6,10 @@
       "label": "Basic",
       "items": [
         {
-          "id": "exampleFunction",
+          "id": "sentimentFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
-          "label": "Run Sentiment Analysis",
+          "label": "Sentiment Analysis (Sentences)",
           "nodeColor": "red",
           "settings": {}
         },
@@ -17,7 +17,7 @@
           "id": "usasFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
-          "label": "Run USAS",
+          "label": "USAS",
           "nodeColor": "red",
           "settings": {}
         },
@@ -25,7 +25,15 @@
           "id": "nerFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
-          "label": "Run NER",
+          "label": "NER",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "translateFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Translation",
           "nodeColor": "red",
           "settings": {}
         }

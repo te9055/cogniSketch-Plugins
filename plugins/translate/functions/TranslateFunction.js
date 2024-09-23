@@ -5,15 +5,15 @@ import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/creat
 
 
 
-const TYPE_NAME = 'nerFunction';
+const TYPE_NAME = 'translateFunction';
 
-registerNodeExecuteCallback(TYPE_NAME, runNER);
+registerNodeExecuteCallback(TYPE_NAME, runTranslation);
 
 
-async function runNER(context) {
+async function runTranslation(context) {
     let textProperty = context.node.getPropertyNamed('text');
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/ner", {
+    await fetch("http://127.0.0.1:5000/translate", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -26,11 +26,8 @@ async function runNER(context) {
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "NER";
-            let tableres = convToHTML(result)
-            tableres.prepend(title)
             let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+            let desNode = createNewEmptyNode(nodeType, result, {
                 x: pos.x + 250,
                 y: pos.y - 50
             })
