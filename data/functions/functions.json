@@ -36,6 +36,22 @@
           "label": "Get Translation",
           "nodeColor": "red",
           "settings": {}
+        },
+        {
+          "id": "collocationFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Collocations",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "concordanceFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Concordances",
+          "nodeColor": "red",
+          "settings": {}
         }
       ]
     }

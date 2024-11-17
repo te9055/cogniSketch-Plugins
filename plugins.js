@@ -78,7 +78,6 @@ module.exports = {
         'routes': [
             { 'root': '/sentiment', 'path': 'sentiment.js' }
         ],
-        'panes': [ 'sentiment' ],
         'stylesheets': [ 'sentiment.css' ],
         'functions': [ 'sentimentFunction' ]
     }, {
@@ -86,7 +85,6 @@ module.exports = {
             'routes': [
                 { 'root': '/usas', 'path': 'usas.js' }
             ],
-            'panes': [ 'usas' ],
             'stylesheets': [ 'usas.css' ],
             'functions': [ 'usasFunction' ]
         },
@@ -95,7 +93,6 @@ module.exports = {
             'routes': [
                 { 'root': '/ner', 'path': 'ner.js' }
             ],
-            'panes': [ 'ner' ],
             'stylesheets': [ 'ner.css' ],
             'functions': [ 'nerFunction' ]
         },
@@ -104,9 +101,24 @@ module.exports = {
             'routes': [
                 { 'root': '/translate', 'path': 'translate.js' }
             ],
-            'panes': [ 'translate' ],
             'stylesheets': [ 'translate.css' ],
             'functions': [ 'translateFunction' ]
+        },
+        {
+            'name': 'collocation',
+            'routes': [
+                { 'root': '/collocation', 'path': 'collocation.js' }
+            ],
+            'stylesheets': [ 'collocation.css' ],
+            'functions': [ 'collocationFunction' ]
+        },
+        {
+            'name': 'concordance',
+            'routes': [
+                { 'root': '/concordance', 'path': 'concordance.js' }
+            ],
+            'stylesheets': [ 'concordance.css' ],
+            'functions': [ 'concordanceFunction' ]
         }
     ]
 };
