@@ -43,15 +43,14 @@ function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Term", "Translation","PMI Score"];
-
+    let cols = ["Term", "Translation","LogRatio Score"];
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
     cols.forEach((item) => {
         let th = document.createElement("th");
-        th.innerText = item; // Set the column name as the text of the header cell
 
+        th.innerText = item; // Set the column name as the text of the header cell
         tr.appendChild(th); // Append the header cell to the header row
 
     });
@@ -63,19 +62,25 @@ function convToHTML(jsonData) {
 
         let tr = document.createElement("tr");
 
-        console.log(item);
         // Get the values of the current object in the JSON data
         let vals = Object.values(item);
-        console.log(vals);
         vals.forEach((elem) => {
             let td = document.createElement("td");
+
             td.innerText = elem; // Set the value as the text of the table cell
             tr.appendChild(td);
 
+
         });
         table.appendChild(tr)
+
 
     });
     return table;
 
 }
+
+//function getRow(event) {
+//    var txt = $(event).text();;
+ //   alert(txt + ' selected txt');
+//}

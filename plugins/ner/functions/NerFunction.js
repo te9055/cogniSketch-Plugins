@@ -29,21 +29,42 @@ async function runNER(context) {
             let title = document.createElement("p").innerText = "NER";
             let tableres = convToHTML(result)
             tableres.prepend(title)
+
             let nodeType = getPalette().getItemById('text');
             let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
                 x: pos.x + 250,
                 y: pos.y - 50
             })
             let srcNode = context.node
+
             createNewLink(srcNode, desNode)
+
+            let tablerows = tableres.rows
+            for (var i = 1; i < tablerows.length; i++) {
+                let row = tablerows[i]
+                var x = row.insertCell(-1)
+                x.innerHTML = "CLICK ME";
+                x.addEventListener('click', function(ev ){
+                    console.log('click');
+                })
+            }
+            //var firstRow = document.getElementById("table").rows[0];
+            //var firstRow = document.getElementById(desNode).rows[0];
+            //var x = firstRow.insertCell(-1);
+            //x.innerText = "New cell";
         })
+
+
+
+
 }
 
 function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
+
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Word", "Translation", "NER", "Frequency"];
+    let cols = ["Word", "Translation", "NER", "Frequency","Action"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
@@ -60,22 +81,43 @@ function convToHTML(jsonData) {
 
     table.append(tr); // Append the header to the table
     jsonData.forEach((item) => {
-
+        // Insert text
         let tr = document.createElement("tr");
 
-        console.log(item);
         // Get the values of the current object in the JSON data
         let vals = Object.values(item);
-        console.log(vals);
         vals.forEach((elem) => {
+            //let btn = document.createElement("BUTTON"); // Create a <button> element
+            //btn.innerHTML = "CLICK ME"; // Insert text
             let td = document.createElement("td");
             td.innerText = elem; // Set the value as the text of the table cell
+            //td.appendChild(btn);
+
             tr.appendChild(td);
 
         });
+
         table.appendChild(tr)
 
+
+
     });
+    //console.log(table)
+    //let tablerows = table.rows
+    //for (var i = 1; i < tablerows.length; i++) {
+    //    let row = tablerows[i]
+    //    var x = row.insertCell(-1)
+    //    x.innerHTML = "CLICK ME";
+    //    x.addEventListener('click', function(ev ){
+    //        console.log('click');
+    //    })
+    //}
+
+
     return table;
 
+}
+
+function onClick() {
+    console.log("clicked");
 }
