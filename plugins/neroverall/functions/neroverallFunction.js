@@ -7,16 +7,16 @@ import {registerEvents,createButton,registerClickEvent} from "/javascripts/priva
 
 
 
-const TYPE_NAME = 'nerFunction';
+const TYPE_NAME = 'neroverallFunction';
 
-registerNodeExecuteCallback(TYPE_NAME, runNER);
+registerNodeExecuteCallback(TYPE_NAME, runNERoverall);
 
 
-async function runNER(context) {
-    let textProperty = context.node.getPropertyNamed('text');
-
+async function runNERoverall(context) {
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/ner", {
+    await fetch("http://127.0.0.1:5000/neroverall", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -56,7 +56,7 @@ function convToHTML(jsonData) {
     let table =  document.createElement("table");
 
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Word", "Translation", "NER", "Frequency","Action"];
+    let cols = ["Doc Id", "NER", "Frequency","Action"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
@@ -95,22 +95,28 @@ function convToHTML(jsonData) {
 
     });
     //console.log(table)
-    //let tablerows = table.rows
-    //for (var i = 1; i < tablerows.length; i++) {
-    //    let row = tablerows[i]
-    //    var x = row.insertCell(-1)
-    //    var button = createButton(x, 'b' + i.toString(), 'clickme',todo)
+    let tablerows = table.rows
+    for (var i = 1; i < tablerows.length; i++) {
+        let row = tablerows[i]
+        var x = row.insertCell(-1)
+
+       // x.innerHTML = "<button onclick="+show();+">HERE</button>"
+       // x.innerHTML = "<button>HERE</button>"
+        x.innerHTML = "<button class='btn btn-primary'  onClick='{() => {console.log(x))})}>HERE</button>"
+
+        //console.log(x)
+        //var button = document.getElementById('1');
+        //console.log(button)
+        //button.addEventListener("click", () => {
+        //    alert('clicked');
+        //});
 
 
-    //    x.appendChild(tableBtn);
-    //}
-
+    }
 
 
     return table;
 
 }
 
-function todo(){
-    alert('hi');
-}
+

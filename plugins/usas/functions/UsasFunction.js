@@ -5,10 +5,10 @@ import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/creat
 
 const TYPE_NAME = 'usasFunction';
 
-registerNodeExecuteCallback(TYPE_NAME, runExample);
+registerNodeExecuteCallback(TYPE_NAME, runUsas);
 
 
-async function runExample(context) {
+async function runUsas(context) {
     let textProperty = context.node.getPropertyNamed('text');
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/usas", {

@@ -80,14 +80,7 @@ module.exports = {
         ],
         'stylesheets': [ 'sentiment.css' ],
         'functions': [ 'sentimentFunction' ]
-    }, {
-            'name': 'usas',
-            'routes': [
-                { 'root': '/usas', 'path': 'usas.js' }
-            ],
-            'stylesheets': [ 'usas.css' ],
-            'functions': [ 'usasFunction' ]
-        },
+    },
         {
             'name': 'ner',
             'routes': [
@@ -119,6 +112,31 @@ module.exports = {
             ],
             'stylesheets': [ 'concordance.css' ],
             'functions': [ 'concordanceFunction' ]
-        }
+        },
+        {
+            'name': 'multidatasets',
+            'routes': [
+                { 'root': '/multidatasets', 'path': 'multidatasets.js' }
+            ],
+            'stylesheets': [ 'multidatasets.css' ],
+            'functions': [ 'multidatasetsFunction' ]
+        },
+        {
+            'name': 'usas',
+            'routes': [
+                { 'root': '/usas', 'path': 'usas.js' }
+            ],
+            'stylesheets': [ 'usas.css' ],
+            'functions': [ 'usasFunction' ]
+        },
+        {
+            'name': 'neroverall',
+            'routes': [
+                { 'root': '/neroverall', 'path': 'neroverall.js' }
+            ],
+            'stylesheets': [ 'neroverall.css' ],
+            'functions': [ 'neroverallFunction' ]
+        },
+
     ]
 };

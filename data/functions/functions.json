@@ -52,6 +52,22 @@
           "label": "Get Concordances",
           "nodeColor": "red",
           "settings": {}
+        },
+        {
+          "id": "multidatasetsFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Mutlidatasets",
+          "nodeColor": "blue",
+          "settings": {}
+        },
+        {
+          "id": "neroverallFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get NER overall",
+          "nodeColor": "red",
+          "settings": {}
         }
       ]
     }

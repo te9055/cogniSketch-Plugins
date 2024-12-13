@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="work towards concordence and collocaion">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ner/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/translate/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usas/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/concordance/routes/concordance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/panes/multidatasets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/panes/multidatasets/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/routes/multidatasets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/stylesheets/multidatasets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/multidatasets/typedefs/defs_example.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/panes/neroverall/neroverall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/panes/neroverall/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/routes/neroverall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/stylesheets/neroverall.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/typedefs/defs_example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +86,7 @@
     &quot;Shell Script.Start Cogni.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;plugins&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/concordance&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/neroverall&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,11 +100,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/neroverall" />
+      <recent name="$PROJECT_DIR$/plugins/multidatasets" />
+      <recent name="$PROJECT_DIR$/plugins/multidatasets/typedefs" />
       <recent name="$PROJECT_DIR$/plugins/concordance" />
       <recent name="$PROJECT_DIR$/plugins/collocation" />
-      <recent name="$PROJECT_DIR$/plugins" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/multidatasets/panes" />
+      <recent name="$PROJECT_DIR$/plugins/multidatasets/panes/multidatasets" />
       <recent name="$PROJECT_DIR$/plugins" />
     </key>
   </component>
@@ -165,7 +194,19 @@
       <workItem from="1728475458384" duration="2903000" />
       <workItem from="1730899988500" duration="8283000" />
       <workItem from="1731404340789" duration="2718000" />
-      <workItem from="1731505496605" duration="3826000" />
+      <workItem from="1731505496605" duration="4803000" />
+      <workItem from="1731870847760" duration="6898000" />
+      <workItem from="1732110606402" duration="13153000" />
+      <workItem from="1732199267917" duration="3319000" />
+      <workItem from="1732273901431" duration="15480000" />
+      <workItem from="1732700891330" duration="12402000" />
+      <workItem from="1733219198630" duration="8245000" />
+      <workItem from="1733229685589" duration="5807000" />
+      <workItem from="1733740449512" duration="1784000" />
+      <workItem from="1733747238018" duration="6164000" />
+      <workItem from="1733754390284" duration="14716000" />
+      <workItem from="1733833465060" duration="937000" />
+      <workItem from="1733834928422" duration="6932000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -207,7 +248,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731838557112</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1731839243472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731839243472</updated>
+    </task>
+    <task id="LOCAL-00007" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1732627804580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732627804580</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

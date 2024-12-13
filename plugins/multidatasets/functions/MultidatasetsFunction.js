@@ -7,16 +7,15 @@ import {registerEvents,createButton,registerClickEvent} from "/javascripts/priva
 
 
 
-const TYPE_NAME = 'nerFunction';
+const TYPE_NAME = 'multidatasetsFunction';
 
-registerNodeExecuteCallback(TYPE_NAME, runNER);
+registerNodeExecuteCallback(TYPE_NAME, runMutidatasets);
 
 
-async function runNER(context) {
+async function runMutidatasets(context) {
     let textProperty = context.node.getPropertyNamed('text');
-
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/ner", {
+    await fetch("http://127.0.0.1:5000/multidatasets", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -29,7 +28,7 @@ async function runNER(context) {
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "NER";
+            let title = document.createElement("p").innerText = "Multidatasets";
             let tableres = convToHTML(result)
             tableres.prepend(title)
 
@@ -38,9 +37,9 @@ async function runNER(context) {
                 x: pos.x + 250,
                 y: pos.y - 50
             })
-            let srcNode = context.node
+            //let srcNode = context.node
 
-            createNewLink(srcNode, desNode)
+            //createNewLink(srcNode, desNode)
 
 
         })
@@ -56,7 +55,7 @@ function convToHTML(jsonData) {
     let table =  document.createElement("table");
 
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Word", "Translation", "NER", "Frequency","Action"];
+    let cols = ["Document Id", "Title", "Publication Date","Content"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
@@ -94,23 +93,8 @@ function convToHTML(jsonData) {
 
 
     });
-    //console.log(table)
-    //let tablerows = table.rows
-    //for (var i = 1; i < tablerows.length; i++) {
-    //    let row = tablerows[i]
-    //    var x = row.insertCell(-1)
-    //    var button = createButton(x, 'b' + i.toString(), 'clickme',todo)
-
-
-    //    x.appendChild(tableBtn);
-    //}
-
-
 
     return table;
 
 }
 
-function todo(){
-    alert('hi');
-}
