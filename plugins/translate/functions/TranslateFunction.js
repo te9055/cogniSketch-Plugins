@@ -11,7 +11,8 @@ registerNodeExecuteCallback(TYPE_NAME, runTranslation);
 
 
 async function runTranslation(context) {
-    let textProperty = context.node.getPropertyNamed('text');
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/translate", {
         method: 'POST',
@@ -27,7 +28,10 @@ async function runTranslation(context) {
             }
         ).then(result => {
             let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, result, {
+            let tableres = convToHTML(result)
+            let title = document.createElement("p").innerText = "Translation";
+            tableres.prepend(title)
+            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
                 x: pos.x + 250,
                 y: pos.y - 50
             })
@@ -40,7 +44,7 @@ function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Word", "Translation", "NER", "Frequency"];
+    let cols = ["Doc Id", "Translation"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");

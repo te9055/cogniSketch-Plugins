@@ -13,8 +13,8 @@ registerNodeExecuteCallback(TYPE_NAME, runNER);
 
 
 async function runNER(context) {
-    let textProperty = context.node.getPropertyNamed('text');
-
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/ner", {
         method: 'POST',
@@ -29,7 +29,7 @@ async function runNER(context) {
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "NER";
+            let title = document.createElement("p").innerText = "Words tagged as 'PERSON'";
             let tableres = convToHTML(result)
             tableres.prepend(title)
 
@@ -56,7 +56,7 @@ function convToHTML(jsonData) {
     let table =  document.createElement("table");
 
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Word", "Translation", "NER", "Frequency","Action"];
+    let cols = ["Word", "NER", "Frequency"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
@@ -94,23 +94,8 @@ function convToHTML(jsonData) {
 
 
     });
-    //console.log(table)
-    //let tablerows = table.rows
-    //for (var i = 1; i < tablerows.length; i++) {
-    //    let row = tablerows[i]
-    //    var x = row.insertCell(-1)
-    //    var button = createButton(x, 'b' + i.toString(), 'clickme',todo)
-
-
-    //    x.appendChild(tableBtn);
-    //}
-
 
 
     return table;
 
-}
-
-function todo(){
-    alert('hi');
 }

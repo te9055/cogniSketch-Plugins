@@ -55,7 +55,7 @@ function convToHTML(jsonData) {
     let table =  document.createElement("table");
 
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Document Id", "Title", "Publication Date","Content"];
+    let cols = ["Title", "Publication Date"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");

@@ -11,7 +11,8 @@ registerNodeExecuteCallback(TYPE_NAME, runCollocation);
 
 
 async function runCollocation(context) {
-    let textProperty = context.node.getPropertyNamed('text');
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/collocation", {
         method: 'POST',
@@ -26,7 +27,7 @@ async function runCollocation(context) {
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "Collocations";
+            let title = document.createElement("p").innerText = "Collocations for the word '部' (department)";
             let tableres = convToHTML(result)
             tableres.prepend(title)
             let nodeType = getPalette().getItemById('text');
@@ -43,7 +44,7 @@ function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Term", "Translation","LogRatio Score"];
+    let cols = ["Collocate", "Translation", "LogRatio","Frequency"];
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 

@@ -137,6 +137,14 @@ module.exports = {
             'stylesheets': [ 'neroverall.css' ],
             'functions': [ 'neroverallFunction' ]
         },
+        {
+            'name': 'usasFine',
+            'routes': [
+                { 'root': '/usasFine', 'path': 'usasFine.js' }
+            ],
+            'stylesheets': [ 'usasFine.css' ],
+            'functions': [ 'usasFineFunction' ]
+        }
 
     ]
 };

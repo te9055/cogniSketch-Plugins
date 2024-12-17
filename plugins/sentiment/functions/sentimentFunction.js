@@ -11,7 +11,9 @@ const URL_EXAMPLE = '/example/';
 registerNodeExecuteCallback(TYPE_NAME, runSentimentAnal);
 
 async function runSentimentAnal(context) {
-    let textProperty = context.node.getPropertyNamed('text');
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
+    console.log(textProperty)
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/sentiment", {
         method: 'POST',
@@ -40,6 +42,7 @@ async function runSentimentAnal(context) {
 }
 
 function convToHTML(jsonData) {
+    console.log(jsonData);
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
     let cols = ["Sentiment","Count"];

@@ -68,6 +68,14 @@
           "label": "Get NER overall",
           "nodeColor": "red",
           "settings": {}
+        },
+        {
+          "id": "usasFineFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get USAS (Fine)",
+          "nodeColor": "red",
+          "settings": {}
         }
       ]
     }

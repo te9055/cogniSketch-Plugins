@@ -9,7 +9,8 @@ registerNodeExecuteCallback(TYPE_NAME, runUsas);
 
 
 async function runUsas(context) {
-    let textProperty = context.node.getPropertyNamed('text');
+    //let textProperty = context.node.getPropertyNamed('text');
+    let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/usas", {
         method: 'POST',
@@ -40,7 +41,7 @@ async function runUsas(context) {
 function convToHTML(jsonData) {
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Tag", "Definition", "Frequency"]
+    let cols = ["Discourse field", "Definition", "Frequency"]
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
