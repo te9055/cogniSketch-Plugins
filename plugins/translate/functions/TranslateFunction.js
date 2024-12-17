@@ -11,8 +11,10 @@ registerNodeExecuteCallback(TYPE_NAME, runTranslation);
 
 
 async function runTranslation(context) {
-    //let textProperty = context.node.getPropertyNamed('text');
-    let textProperty = 'boo';
+    let textProperty = context.node.getPropertyNamed('text');
+    let n = context.node.getData().label;
+    console.log(n);
+    //let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/translate", {
         method: 'POST',
@@ -20,7 +22,7 @@ async function runTranslation(context) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page': textProperty})
+        body: JSON.stringify({'page': context.node.getData().label})
     }).then(response => response.text())
         .then((dataStr) => {
                 let data = JSON.parse(dataStr);
@@ -29,6 +31,7 @@ async function runTranslation(context) {
         ).then(result => {
             let nodeType = getPalette().getItemById('text');
             let tableres = convToHTML(result)
+            //let tableres = result
             let title = document.createElement("p").innerText = "Translation";
             tableres.prepend(title)
             let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
@@ -43,8 +46,8 @@ async function runTranslation(context) {
 function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
-    //let cols = Object.keys(jsonData[0]);
-    let cols = ["Doc Id", "Translation"];
+    let cols = Object.keys(jsonData[0]);
+    //let cols = ["Doc Id", "Translation"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");

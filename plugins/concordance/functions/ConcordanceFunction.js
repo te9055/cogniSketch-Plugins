@@ -44,7 +44,7 @@ function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Preceded By", "Collocate", "Followed By"];
+    let cols = ["Preceded By", "Term", "Followed By"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");

@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="work towards concordence and collocaion">
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/images/icon-export.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/images/icon-import.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/panes/usasFine/templates/examplePaneTemplates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/panes/usasFine/usasFine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/routes/usasFine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/stylesheets/usasFine.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usasFine/typedefs/defs_example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +55,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Node.js.TranslateFunction.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -106,6 +89,9 @@
     </key>
   </component>
   <component name="RunManager" selected="Shell Script.Start Cogni">
+    <configuration name="TranslateFunction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" working-dir="$PROJECT_DIR$/plugins/translate/functions">
+      <method v="2" />
+    </configuration>
     <configuration name="Start Cogni" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="pm2 start bin/www_local -f" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -132,9 +118,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Node.js.TranslateFunction.js" />
       <item itemvalue="npm.start" />
       <item itemvalue="Shell Script.Start Cogni" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.TranslateFunction.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -206,7 +198,9 @@
       <workItem from="1734346413224" duration="2297000" />
       <workItem from="1734350350813" duration="10000" />
       <workItem from="1734350415019" duration="1039000" />
-      <workItem from="1734387127277" duration="5994000" />
+      <workItem from="1734387127277" duration="14689000" />
+      <workItem from="1734406038398" duration="1580000" />
+      <workItem from="1734407936385" duration="4596000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -272,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734089181114</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1734397719119</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734397719119</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +294,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js</url>
           <line>32</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

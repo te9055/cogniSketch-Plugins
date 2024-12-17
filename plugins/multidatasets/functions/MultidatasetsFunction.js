@@ -28,7 +28,7 @@ async function runMutidatasets(context) {
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "Multidatasets";
+            let title = document.createElement("p").innerText = "Multi-file Corpus";
             let tableres = convToHTML(result)
             tableres.prepend(title)
 
