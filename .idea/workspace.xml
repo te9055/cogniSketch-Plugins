@@ -4,18 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="work towards concordence and collocaion">
+    <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="demo time">
+      <change afterPath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/neroverall/functions/testF.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/functions/testfunc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/panes/testfunc/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/panes/testfunc/testfunc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/routes/testfunc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/testfunc/stylesheets/testfunc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/usas/functions/testusas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/neroverall/stylesheets/neroverall.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/stylesheets/neroverall.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/basic.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -62,7 +90,7 @@
     &quot;Shell Script.Start Cogni.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;plugins&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/usasFine&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/collocation/functions&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,11 +104,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/collocation/functions" />
+      <recent name="$PROJECT_DIR$/plugins/usas/functions" />
+      <recent name="$PROJECT_DIR$/plugins/neroverall/functions" />
+      <recent name="$PROJECT_DIR$/plugins/testfunc" />
       <recent name="$PROJECT_DIR$/plugins/usasFine" />
-      <recent name="$PROJECT_DIR$/plugins/neroverall" />
-      <recent name="$PROJECT_DIR$/plugins/multidatasets" />
-      <recent name="$PROJECT_DIR$/plugins/multidatasets/typedefs" />
-      <recent name="$PROJECT_DIR$/plugins/concordance" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plugins/multidatasets/panes" />
@@ -200,7 +228,17 @@
       <workItem from="1734350415019" duration="1039000" />
       <workItem from="1734387127277" duration="14689000" />
       <workItem from="1734406038398" duration="1580000" />
-      <workItem from="1734407936385" duration="4596000" />
+      <workItem from="1734407936385" duration="7605000" />
+      <workItem from="1736325881187" duration="11624000" />
+      <workItem from="1736776521975" duration="15773000" />
+      <workItem from="1736950007929" duration="3955000" />
+      <workItem from="1737020948464" duration="6827000" />
+      <workItem from="1737028067939" duration="45731000" />
+      <workItem from="1738202949955" duration="17245000" />
+      <workItem from="1738326683848" duration="235000" />
+      <workItem from="1738327214939" duration="9229000" />
+      <workItem from="1738583808093" duration="3008000" />
+      <workItem from="1738587161987" duration="4912000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -274,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734397719119</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1734440162813</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734440162813</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,17 +332,7 @@
     <MESSAGE value="Added sentiment Analysis" />
     <MESSAGE value="Adds Sentiment Analysis + Translation + NER + USAS" />
     <MESSAGE value="work towards concordence and collocaion" />
-    <option name="LAST_COMMIT_MESSAGE" value="work towards concordence and collocaion" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="demo time" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo time" />
   </component>
 </project>

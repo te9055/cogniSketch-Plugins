@@ -22,14 +22,6 @@
           "settings": {}
         },
         {
-          "id": "nerFunction",
-          "icon": "/images/palette/icon-json.svg",
-          "icon-alt": "icon-example-function",
-          "label": "NER",
-          "nodeColor": "red",
-          "settings": {}
-        },
-        {
           "id": "translateFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
@@ -42,14 +34,6 @@
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
           "label": "Get Collocations",
-          "nodeColor": "red",
-          "settings": {}
-        },
-        {
-          "id": "concordanceFunction",
-          "icon": "/images/palette/icon-json.svg",
-          "icon-alt": "icon-example-function",
-          "label": "Get Concordances",
           "nodeColor": "red",
           "settings": {}
         },
@@ -70,10 +54,10 @@
           "settings": {}
         },
         {
-          "id": "usasFineFunction",
+          "id": "concordanceFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
-          "label": "Get USAS (Fine)",
+          "label": "Get Concordances",
           "nodeColor": "red",
           "settings": {}
         }

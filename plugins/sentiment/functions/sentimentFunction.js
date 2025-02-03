@@ -1,7 +1,7 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
+import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 
 
 
@@ -29,23 +29,28 @@ async function runSentimentAnal(context) {
             }
         ).then(result => {
             let title = document.createElement("p").innerText = "Sentiment Analysis (Sentences)";
-            let tableres = convToHTML(result)
+            let tableres = convToHTML(result);
             tableres.prepend(title)
-            let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
-                x: pos.x,
-                y: pos.y - 75
-            })
+            let tmp = Object();
+            tmp.value = tableres.outerHTML;
+            tmp.type = "normal";
+
+            let nodeType = getPalette().getItemById('table');
+            let desNode = createNewFullNode(nodeType, title.outerHTML, {
+                x: pos.x + 250,
+                y: pos.y - 50
+
+            }, null, {"table": tmp});
+
             let srcNode = context.node
-            createNewLink(srcNode, desNode)
-        })
+            createNewLink(srcNode, desNode) });
 }
 
 function convToHTML(jsonData) {
     console.log(jsonData);
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Sentiment","Count"];
+    let cols = ["Sentiment","Count","Expand"];
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
@@ -69,7 +74,10 @@ function convToHTML(jsonData) {
             tr.appendChild(td);
 
         });
-        table.appendChild(tr)
+        let td = document.createElement("td");
+        td.innerHTML = "<button class=\"cs-allow-clicks\" onclick=\"alert('test')\">Expand</button>"
+        tr.appendChild(td);
+        table.appendChild(tr);
 
     });
     return table;

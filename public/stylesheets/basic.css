@@ -254,6 +254,8 @@ p {
     width: 20px;
     height: 20px;
     border-radius: 15px;
+    z-index: 10;
+    pointer-events: auto;
 }
 
 .cs-button2 {

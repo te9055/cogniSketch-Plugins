@@ -1,124 +1,145 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
-import {registerEvents,createButton,registerClickEvent} from "/javascripts/private/util/dom.js";
-//import * as events from "node:events";
-
+import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
+import {registerEvents} from "/javascripts/private/util/dom.js";
+import {testfun} from '/plugins/neroverall/functions/testF.js';
+import {eventSetProperty} from "/javascripts/private/core/core_panes/canvas/events/triggered.js";
+import {runNER} from "/plugins/ner/functions/NerFunction.js";
 
 
 const TYPE_NAME = 'neroverallFunction';
 
 registerNodeExecuteCallback(TYPE_NAME, runNERoverall);
 
-
 async function runNERoverall(context) {
-    //let textProperty = context.node.getPropertyNamed('text');
-    let textProperty = 'boo';
-    let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/neroverall", {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({'page': textProperty})
-    }).then(response => response.text())
-        .then((dataStr) => {
-                let data = JSON.parse(dataStr);
-                return data.output;
-            }
-        ).then(result => {
-            let title = document.createElement("p").innerText = "NER Tags";
-            let tableres = convToHTML(result)
-            tableres.prepend(title)
+    try {
+        let textProperty = 'boo';
+        let pos = getPosFromNode(context.node.getPos(), 9, 10);
 
-            let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
-                x: pos.x + 250,
-                y: pos.y - 50
-            })
-            let srcNode = context.node
+        let response = await fetch("http://127.0.0.1:5000/neroverall", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 'page': textProperty })
+        });
 
-            createNewLink(srcNode, desNode)
+        let dataStr = await response.text();
+        let data = JSON.parse(dataStr);
+        let result = data.output;
+
+        let title = document.createElement("p");
+        title.innerText = "NER";
+
+        window.jsonData = result;
+        let table = convToHTML(result);
+
+        document.body.appendChild(title);
+        document.body.appendChild(table);
 
 
-        })
+        let tmp = { value: table.outerHTML, type: "normal" };
+        let nodeType = getPalette().getItemById('table');
 
+        let desNode = createNewFullNode(nodeType, title.outerHTML, {
+            x: pos.x + 250,
+            y: pos.y - 50
+        }, null, { "table": tmp });
 
+        let srcNode = context.node;
+        createNewLink(srcNode, desNode);
 
+        window.desNode = desNode;
 
+        //console.log("Node and link created");
+
+    } catch (err) {
+        console.error("Error during runNERoverall:", err);
+    }
 }
 
 
+
 function convToHTML(jsonData) {
-
-    let table =  document.createElement("table");
-
-    //let cols = Object.keys(jsonData[0]);
-    let cols = ["NER", "Frequency"];
+    let table = document.createElement("table");
+    let cols = ["NER", "Frequency", "Expand"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
     cols.forEach((item) => {
         let th = document.createElement("th");
-        th.innerText = item; // Set the column name as the text of the header cell
-
-        tr.appendChild(th); // Append the header cell to the header row
-
+        th.innerText = item;
+        tr.appendChild(th);
     });
 
-    thead.appendChild(tr); // Append the header row to the header
+    thead.appendChild(tr);
+    table.appendChild(thead);
 
-    table.append(tr); // Append the header to the table
-    jsonData.forEach((item) => {
-        // Insert text
+    let tbody = document.createElement("tbody");
+
+    jsonData.forEach((item, index) => {
         let tr = document.createElement("tr");
 
-        // Get the values of the current object in the JSON data
         let vals = Object.values(item);
         vals.forEach((elem) => {
-            //let btn = document.createElement("BUTTON"); // Create a <button> element
-            //btn.innerHTML = "CLICK ME"; // Insert text
             let td = document.createElement("td");
-            td.innerText = elem; // Set the value as the text of the table cell
-            //td.appendChild(btn);
-
-
-
+            td.innerText = elem;
             tr.appendChild(td);
-
         });
 
-        table.appendChild(tr)
+        // Add button using innerHTML with globally accessible onclick function
+        let td = document.createElement("td");
+        td.innerHTML = `<button class="cs-allow-clicks" onclick="window.handleButtonClick(${index})">Expand</button>`;
+        tr.appendChild(td);
 
-
-
+        tbody.appendChild(tr);
     });
-    //console.log(table)
-    //let tablerows = table.rows
-    //for (var i = 1; i < tablerows.length; i++) {
-    //    let row = tablerows[i]
-    //    var x = row.insertCell(-1)
 
-       // x.innerHTML = "<button onclick="+show();+">HERE</button>"
-       // x.innerHTML = "<button>HERE</button>"
-    //    x.innerHTML = "<button class='btn btn-primary'  onClick='{() => {console.log(x))})}>HERE</button>"
-
-        //console.log(x)
-        //var button = document.getElementById('1');
-        //console.log(button)
-        //button.addEventListener("click", () => {
-        //    alert('clicked');
-        //});
-
-
-    //}
-
-
+    table.appendChild(tbody);
     return table;
-
 }
+
+window.handleButtonClick = function (index) {
+    if (window.jsonData) {
+        let rowData = window.jsonData[index];
+        console.log("Row data:", rowData);
+
+
+        if (window.desNode) {
+            console.log("DesNode:", window.desNode);
+            testfun(rowData, window.desNode); // Pass desNode to testfun
+        } else {
+            console.log("desNode is not available yet.");
+        }
+    }
+};
+
+/*
+window.handleButtonClick = function (index) {
+    //console.log("Button clicked for row:", index);
+
+    if (window.jsonData) {
+        //console.log("Row data:", window.jsonData[index]);
+        testfun(window.jsonData[index]);
+
+    }
+};
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
 
 

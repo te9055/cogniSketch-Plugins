@@ -1,7 +1,7 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
+import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 import {registerEvents,createButton,registerClickEvent} from "/javascripts/private/util/dom.js";
 //import * as events from "node:events";
 
@@ -12,9 +12,10 @@ const TYPE_NAME = 'nerFunction';
 registerNodeExecuteCallback(TYPE_NAME, runNER);
 
 
-async function runNER(context) {
+export async function runNER(context) {
+
     //let textProperty = context.node.getPropertyNamed('text');
-    let textProperty = 'boo';
+    let textProperty = rowData['1 NER'];
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/ner", {
         method: 'POST',
@@ -30,22 +31,21 @@ async function runNER(context) {
             }
         ).then(result => {
             let title = document.createElement("p").innerText = "Words tagged as 'PERSON'";
-            let tableres = convToHTML(result)
+            let tableres = convToHTML(result);
             tableres.prepend(title)
+            let tmp = Object();
+            tmp.value = tableres.outerHTML;
+            tmp.type = "normal";
 
-            let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+            let nodeType = getPalette().getItemById('table');
+            let desNode = createNewFullNode(nodeType, title.outerHTML, {
                 x: pos.x + 250,
                 y: pos.y - 50
-            })
+
+            }, null, {"table": tmp});
+
             let srcNode = context.node
-
-            createNewLink(srcNode, desNode)
-
-
-        })
-
-
+            createNewLink(srcNode, desNode) });
 
 
 }
@@ -89,7 +89,8 @@ function convToHTML(jsonData) {
 
         });
 
-        table.appendChild(tr)
+
+        table.appendChild(tr);
 
 
 

@@ -1,9 +1,7 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
-import {registerEvents,createButton,registerClickEvent} from "/javascripts/private/util/dom.js";
-//import * as events from "node:events";
+import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 
 
 
@@ -29,17 +27,18 @@ async function runMutidatasets(context) {
             }
         ).then(result => {
             let title = document.createElement("p").innerText = "Multi-file Corpus";
-            let tableres = convToHTML(result)
+            let tableres = convToHTML(result);
             tableres.prepend(title)
+            let tmp = Object();
+            tmp.value = tableres.outerHTML;
+            tmp.type = "normal";
 
-            let nodeType = getPalette().getItemById('text');
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+            let nodeType = getPalette().getItemById('table');
+            let desNode = createNewFullNode(nodeType, title.outerHTML, {
                 x: pos.x + 250,
                 y: pos.y - 50
-            })
-            //let srcNode = context.node
 
-            //createNewLink(srcNode, desNode)
+            }, null, {"table": tmp});
 
 
         })

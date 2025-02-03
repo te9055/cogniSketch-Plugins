@@ -1,7 +1,7 @@
 import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFunction.js";
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
-import {createNewEmptyNode, createNewLink} from "/javascripts/private/core/create.js";
+import {createNewEmptyNode,createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 
 
 
@@ -11,36 +11,45 @@ registerNodeExecuteCallback(TYPE_NAME, runTranslation);
 
 
 async function runTranslation(context) {
-    let textProperty = context.node.getPropertyNamed('text');
-    let n = context.node.getData().label;
-    console.log(n);
+    let textProperty = context.node.getData().properties['table'].value;
+    //console.log('context: ',context);
+    //console.log('textProperty: ',textProperty);
+    //let n = context.node.getData().label;
+    console.log('node getdata: ',context.node.getData().properties['table'].value);
+
     //let textProperty = 'boo';
     let pos = getPosFromNode(context.node.getPos(),9,10);
-    await fetch("http://127.0.0.1:5000/translate", {
+
+    await fetch("http://127.0.0.1:5000/translation", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page': context.node.getData().label})
+        body: JSON.stringify({'page': textProperty})
     }).then(response => response.text())
         .then((dataStr) => {
                 let data = JSON.parse(dataStr);
                 return data.output;
             }
         ).then(result => {
-            let nodeType = getPalette().getItemById('text');
-            let tableres = convToHTML(result)
-            //let tableres = result
             let title = document.createElement("p").innerText = "Translation";
+            let tableres = convToHTML(result);
             tableres.prepend(title)
-            let desNode = createNewEmptyNode(nodeType, tableres.outerHTML, {
+            let tmp = Object();
+            tmp.value = tableres.outerHTML;
+            tmp.type = "normal";
+
+            let nodeType = getPalette().getItemById('table');
+            let desNode = createNewFullNode(nodeType, title.outerHTML, {
                 x: pos.x + 250,
                 y: pos.y - 50
-            })
+
+            }, null, {"table": tmp});
+
             let srcNode = context.node
-            createNewLink(srcNode, desNode)
-        })
+            createNewLink(srcNode, desNode) });
+
 }
 
 function convToHTML(jsonData) {

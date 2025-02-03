@@ -144,6 +144,14 @@ module.exports = {
             ],
             'stylesheets': [ 'usasFine.css' ],
             'functions': [ 'usasFineFunction' ]
+        },
+        {
+            'name': 'testfunc',
+            'routes': [
+                { 'root': '/testfunc', 'path': 'testfunc.js' }
+            ],
+            'stylesheets': [ 'testfunc.css' ],
+            'functions': [ 'testfunc' ]
         }
 
     ]
