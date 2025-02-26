@@ -122,6 +122,14 @@ module.exports = {
             'functions': [ 'multidatasetsFunction' ]
         },
         {
+            'name': 'datasets',
+            'routes': [
+                { 'root': '/datasets', 'path': 'datasets.js' }
+            ],
+            'stylesheets': [ 'datasets.css' ],
+            'functions': [ 'datasetsFunction' ]
+        },
+        {
             'name': 'usas',
             'routes': [
                 { 'root': '/usas', 'path': 'usas.js' }

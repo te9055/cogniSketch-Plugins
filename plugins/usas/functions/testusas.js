@@ -2,16 +2,17 @@ import {getPalette} from "/javascripts/private/state.js";
 import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
 
-export async function testfunusas(rowData,nodesrc) {
+export async function testfunusas(rowData,datasetId,nodesrc) {
     console.log('nodesrc usas: ',nodesrc);
     console.log('rowdata usas: ',rowData['0 Tag']);
+    let datatopass = rowData['0 Tag']+'__'+datasetId
     let response = await fetch("http://127.0.0.1:5000/usasFine", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page':rowData['0 Tag']})
+        body: JSON.stringify({'page':datatopass})
     });
 
     let dataStr = await response.text();

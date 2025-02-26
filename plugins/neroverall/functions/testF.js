@@ -2,17 +2,20 @@ import {getPalette} from "/javascripts/private/state.js";
 import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
 
-export async function testfun(rowData,nodesrc) {
+export async function testfun(rowData,datasetId,nodesrc) {
     console.log('nodesrc: ',nodesrc)
-
+    console.log('datasetId: ',datasetId)
     console.log("Im in testfun!!!!!Button clicked! Here is the data:", rowData['1 NER']);
+    let datatopass = rowData['1 NER']+'__'+datasetId
+    console.log(datatopass);
     let response = await fetch("http://127.0.0.1:5000/ner", {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page':rowData['1 NER']})
+        //body: JSON.stringify({'page':rowData['1 NER']})
+        body: JSON.stringify({'page':datatopass})
     });
 
     let dataStr = await response.text();

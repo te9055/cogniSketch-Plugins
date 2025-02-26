@@ -5,33 +5,171 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="demo time">
-      <change afterPath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/neroverall/functions/testF.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/functions/testfunc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/images/icon-export.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/images/icon-import.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/panes/testfunc/templates/examplePaneTemplates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/panes/testfunc/testfunc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/routes/testfunc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/testfunc/stylesheets/testfunc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/usas/functions/testusas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/functions/datasetsFunction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/panes/datasets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/panes/datasets/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/routes/datasets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/stylesheets/datasets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/datasets/typedefs/defs_example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260121466_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260121472_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260665647_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260665670_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260876056_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724260876079_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261767765_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261767778_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261773623_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261779718_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261801721_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261806517_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261837555_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261840271_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261878914_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261881727_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261884579_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724261889166_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262061499_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262064572_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262069503_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262073982_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262807289_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262811779_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262880779_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262882921_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262974051_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724262977415_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263091435_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263093696_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263099218_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263103340_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263168412_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263171513_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263175813_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724263179416_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311542328_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311544667_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311564948_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311568179_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311582045_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311585485_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311587154_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311591492_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311593992_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311707583_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311709639_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311752430_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311755429_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311758756_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311762769_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311764937_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311774319_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724311776777_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312292721_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312294325_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312297629_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312302645_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312302651_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312315823_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312315828_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312326079_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312326082_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724312328668_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314070557_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314071876_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314071906_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314080722_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314089048_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314176655_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314176673_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314183605_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314187355_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314191107_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314193393_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314572570_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314572592_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314575401_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314577402_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314719034_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314721046_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314732667_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314732675_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314736955_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724314741774_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724315893306_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724315975880_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724315981807_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724315984129_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316156158_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316158301_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316190329_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316192497_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316197518_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316226146_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316232678_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316263940_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316265821_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316288119_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316293262_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316294915_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316308711_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316310625_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316310629_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316313100_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316322131_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316322142_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316326792_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316329400_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316383166_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316385755_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316390171_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316395841_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/actions/1724316397757_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724260665664_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724260876075_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724261767773_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724261884572_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724261889161_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724262069494_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724262073981_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724263099215_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724263103338_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724263175805_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724263179400_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311564942_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311568169_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311582040_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311752420_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311762764_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724311764928_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724312292714_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724312294323_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724312315826_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724314070551_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724314176670_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724314183600_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724314187347_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724316385734_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724316395840_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/backups/1724316397749_ObjectModel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/files/helloWorld.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/saves/admin/Test/images/Screenshot 2024-06-11 at 20.30.10.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/multidatasets/functions/MultidatasetsFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/ner/functions/NerFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/functions/neroverallFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/neroverall/stylesheets/neroverall.css" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/stylesheets/neroverall.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/neroverall/functions/testF.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/neroverall/functions/testF.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usas/functions/UsasFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usasFine/functions/usasFineFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/usas/functions/testusas.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/usas/functions/testusas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +228,7 @@
     &quot;Shell Script.Start Cogni.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;plugins&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/collocation/functions&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/datasets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -104,11 +242,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/datasets" />
       <recent name="$PROJECT_DIR$/plugins/collocation/functions" />
       <recent name="$PROJECT_DIR$/plugins/usas/functions" />
       <recent name="$PROJECT_DIR$/plugins/neroverall/functions" />
       <recent name="$PROJECT_DIR$/plugins/testfunc" />
-      <recent name="$PROJECT_DIR$/plugins/usasFine" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plugins/multidatasets/panes" />
@@ -239,6 +377,23 @@
       <workItem from="1738327214939" duration="9229000" />
       <workItem from="1738583808093" duration="3008000" />
       <workItem from="1738587161987" duration="4912000" />
+      <workItem from="1738608080298" duration="4014000" />
+      <workItem from="1738749514304" duration="1644000" />
+      <workItem from="1739183663743" duration="15363000" />
+      <workItem from="1739268924282" duration="6967000" />
+      <workItem from="1739361271047" duration="1202000" />
+      <workItem from="1739362557274" duration="3345000" />
+      <workItem from="1739366055450" duration="2418000" />
+      <workItem from="1739368553454" duration="1374000" />
+      <workItem from="1739370447268" duration="1734000" />
+      <workItem from="1739372203990" duration="5000" />
+      <workItem from="1739442984906" duration="6800000" />
+      <workItem from="1739455613788" duration="36821000" />
+      <workItem from="1739972412595" duration="2676000" />
+      <workItem from="1739975634014" duration="9355000" />
+      <workItem from="1740486371337" duration="9220000" />
+      <workItem from="1740517222062" duration="6533000" />
+      <workItem from="1740563759792" duration="6586000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />

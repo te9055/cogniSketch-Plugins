@@ -15,8 +15,10 @@ registerNodeExecuteCallback(TYPE_NAME, runUsas);
 async function runUsas(context) {
     //let textProperty = context.node.getPropertyNamed('text');
     try {
-        let textProperty = 'boo';
+        //let textProperty = 'boo';
         let pos = getPosFromNode(context.node.getPos(), 9, 10);
+        console.log('runUSASoverall context node:',context.node.getData().properties['table'].value);
+        let datasetId = context.node.getData().properties['table'].value;
 
         let response = await fetch("http://127.0.0.1:5000/usas", {
             method: 'POST',
@@ -24,7 +26,8 @@ async function runUsas(context) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 'page': textProperty })
+            //body: JSON.stringify({ 'page': textProperty })
+            body: JSON.stringify({ 'page': datasetId })
         });
 
         let dataStr = await response.text();
@@ -35,6 +38,7 @@ async function runUsas(context) {
         title.innerText = "USAS";
 
         window.jsonData = result;
+        window.datasetId = datasetId;
         let table = convToHTML(result);
 
         document.body.appendChild(title);
@@ -57,7 +61,7 @@ async function runUsas(context) {
         //console.log("Node and link created");
 
     } catch (err) {
-        console.error("Error during runNERoverall:", err);
+        console.error("Error during UsasFunction:", err);
     }
 }
 
@@ -111,7 +115,7 @@ window.handleButtonClickUsas = function (index) {
 
         if (window.desNode) {
             console.log("DesNode usas:", window.desNode);
-            testfunusas(rowData, window.desNode); // Pass desNode to testfun
+            testfunusas(rowData, datasetId, window.desNode); // Pass desNode to testfun
         } else {
             console.log("desNode is not available yet.");
         }

@@ -46,6 +46,14 @@
           "settings": {}
         },
         {
+          "id": "datasetsFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Datasets",
+          "nodeColor": "blue",
+          "settings": {}
+        },
+        {
           "id": "neroverallFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",

@@ -13,7 +13,8 @@ registerNodeExecuteCallback(TYPE_NAME, runCollocation);
 
 async function runCollocation(context) {
     try {
-        let textProperty = 'boo';
+        //let textProperty = 'boo';
+        let datasetId = context.node.getData().properties['table'].value;
         let pos = getPosFromNode(context.node.getPos(), 9, 10);
 
         let response = await fetch("http://127.0.0.1:5000/collocation", {
@@ -22,7 +23,7 @@ async function runCollocation(context) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 'page': textProperty })
+            body: JSON.stringify({ 'page': datasetId})
         });
 
         let dataStr = await response.text();
@@ -117,5 +118,4 @@ window.handleButtonClickColloc = function (index) {
         }
     }
 };
-
- */
+*/

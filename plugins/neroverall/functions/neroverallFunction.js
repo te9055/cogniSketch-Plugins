@@ -14,7 +14,9 @@ registerNodeExecuteCallback(TYPE_NAME, runNERoverall);
 
 async function runNERoverall(context) {
     try {
-        let textProperty = 'boo';
+        //let nodeElement = document.querySelector(`#${context.node.id}`);
+        console.log('runNERoverall context node:',context.node.getData().properties['table'].value);
+        let datasetId = context.node.getData().properties['table'].value;
         let pos = getPosFromNode(context.node.getPos(), 9, 10);
 
         let response = await fetch("http://127.0.0.1:5000/neroverall", {
@@ -23,7 +25,7 @@ async function runNERoverall(context) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 'page': textProperty })
+            body: JSON.stringify({ 'page': datasetId })
         });
 
         let dataStr = await response.text();
@@ -39,7 +41,6 @@ async function runNERoverall(context) {
         document.body.appendChild(title);
         document.body.appendChild(table);
 
-
         let tmp = { value: table.outerHTML, type: "normal" };
         let nodeType = getPalette().getItemById('table');
 
@@ -50,10 +51,8 @@ async function runNERoverall(context) {
 
         let srcNode = context.node;
         createNewLink(srcNode, desNode);
-
         window.desNode = desNode;
-
-        //console.log("Node and link created");
+        window.datasetId = datasetId;
 
     } catch (err) {
         console.error("Error during runNERoverall:", err);
@@ -110,25 +109,13 @@ window.handleButtonClick = function (index) {
 
         if (window.desNode) {
             console.log("DesNode:", window.desNode);
-            testfun(rowData, window.desNode); // Pass desNode to testfun
+            testfun(rowData,datasetId, window.desNode); // Pass desNode to testfun
         } else {
             console.log("desNode is not available yet.");
         }
     }
 };
 
-/*
-window.handleButtonClick = function (index) {
-    //console.log("Button clicked for row:", index);
-
-    if (window.jsonData) {
-        //console.log("Row data:", window.jsonData[index]);
-        testfun(window.jsonData[index]);
-
-    }
-};
-
- */
 
 
 

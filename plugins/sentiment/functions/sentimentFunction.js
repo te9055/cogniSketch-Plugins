@@ -12,8 +12,9 @@ registerNodeExecuteCallback(TYPE_NAME, runSentimentAnal);
 
 async function runSentimentAnal(context) {
     //let textProperty = context.node.getPropertyNamed('text');
-    let textProperty = 'boo';
-    console.log(textProperty)
+    //let textProperty = 'boo';
+    let datasetId = context.node.getData().properties['table'].value;
+
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/sentiment", {
         method: 'POST',
@@ -21,7 +22,7 @@ async function runSentimentAnal(context) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page': textProperty})
+        body: JSON.stringify({'page': datasetId})
     }).then(response => response.text())
         .then((dataStr) => {
                 let data = JSON.parse(dataStr);
@@ -50,7 +51,7 @@ function convToHTML(jsonData) {
     console.log(jsonData);
     let table =  document.createElement("table");
     //let cols = Object.keys(jsonData[0]);
-    let cols = ["Sentiment","Count","Expand"];
+    let cols = ["Sentiment","Count"];
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
 
@@ -74,9 +75,9 @@ function convToHTML(jsonData) {
             tr.appendChild(td);
 
         });
-        let td = document.createElement("td");
-        td.innerHTML = "<button class=\"cs-allow-clicks\" onclick=\"alert('test')\">Expand</button>"
-        tr.appendChild(td);
+        //let td = document.createElement("td");
+        //td.innerHTML = "<button class=\"cs-allow-clicks\" onclick=\"alert('test')\">Expand</button>"
+        //tr.appendChild(td);
         table.appendChild(tr);
 
     });
