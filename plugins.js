@@ -154,6 +154,14 @@ module.exports = {
             'functions': [ 'usasFineFunction' ]
         },
         {
+            'name': 'nlpStance',
+            'routes': [
+                { 'root': '/nlpStance', 'path': 'nlpStance.js' }
+            ],
+            'stylesheets': [ 'nlpStance.css' ],
+            'functions': [ 'nlpStanceFunction' ]
+        },
+        {
             'name': 'testfunc',
             'routes': [
                 { 'root': '/testfunc', 'path': 'testfunc.js' }
