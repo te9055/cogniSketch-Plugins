@@ -10,7 +10,11 @@ async function runDatasets() {
     let container = createNodeContainer(uniqueNodeId);
 
     let nodeType = getPalette().getItemById('table');
-    let desNode = createNewFullNode(nodeType, container.title.outerHTML, { x: 250, y: 250 }, null, { table: { value: container.outerHTML, type: "normal" } });
+    let desNode = createNewFullNode(
+        nodeType, container.title.outerHTML, { x: 250, y: 250 }, null, {
+            table: { value: container.outerHTML, type: "normal" },
+            dataset_id: { value: uniqueNodeId, type: "normal" }
+        });
 
     setTimeout(() => initializeNode(uniqueNodeId), 100);
 }
