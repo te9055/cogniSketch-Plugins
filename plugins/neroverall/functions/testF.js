@@ -41,7 +41,7 @@ export async function testfun(rowData,datasetId,nodesrc) {
         x: pos.x + 250,
         y: pos.y - 50
 
-    }, null, {"table": tmp});
+    }, null, {"table": tmp, "dataset_id": { value: nodesrc.getPropertyNamed('dataset_id'), type: "normal" }});
 
     createNewLink(nodesrc, newnode);
 

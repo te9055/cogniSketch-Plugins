@@ -47,7 +47,7 @@ async function runNERoverall(context) {
         let desNode = createNewFullNode(nodeType, title.outerHTML, {
             x: pos.x + 250,
             y: pos.y - 50
-        }, null, { "table": tmp });
+        }, null, {"table": tmp, "dataset_id": { value: context.node.getPropertyNamed('dataset_id'), type: "normal" }});
 
         let srcNode = context.node;
         createNewLink(srcNode, desNode);

@@ -27,7 +27,13 @@ async function createNodeUsingDefinedTable(nodeId,table){
 
     // delete existing node
     d3.select('#'+ nId).remove();
-    createNewFullNode(nodeType, container.title.outerHTML, { x: 250, y: 250 }, null, { table: { value: container.outerHTML, type: "normal" } });
+    createNewFullNode(
+        nodeType, container.title.outerHTML, { x: 250, y: 250 }, null, {
+            table: { value: container.outerHTML, type: "normal" },
+            dataset_id: { value: uniqueNodeId, type: "normal" }
+        }
+    );
+
 
 }
 
