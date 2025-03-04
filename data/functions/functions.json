@@ -46,6 +46,22 @@
           "settings": {}
         },
         {
+          "id": "llmSummarizationFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Summarize documents",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "topicExtractionFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Extract Topics from Summaries",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
           "id": "neroverallFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",

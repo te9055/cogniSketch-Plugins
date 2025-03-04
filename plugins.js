@@ -130,6 +130,22 @@ module.exports = {
             'functions': [ 'datasetsFunction' ]
         },
         {
+            'name': 'llmSummarization',
+            'routes': [
+                { 'root': '/llmSummarization', 'path': 'llmSummarization.js' }
+            ],
+            'stylesheets': [ 'llmSummarization.css' ],
+            'functions': [ 'llmSummarizationFunction' ]
+        },
+        {
+            'name': 'topicExtraction',
+            'routes': [
+                { 'root': '/topicExtraction', 'path': 'topicExtraction.js' }
+            ],
+            'stylesheets': [ 'topicExtraction.css' ],
+            'functions': [ 'topicExtractionFunction' ]
+        },
+        {
             'name': 'usas',
             'routes': [
                 { 'root': '/usas', 'path': 'usas.js' }
