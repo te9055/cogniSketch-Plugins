@@ -27,10 +27,8 @@ async function runTopicExtraction(context) {
         let result = data.output;
 
         let title = document.createElement("p");
-        title.innerText = "Summaries";
+        title.innerText = "Topics";
 
-        window.jsonData = result;
-        window.datasetId = datasetId;
         let table = convToHTML(result);
 
         let tmp = { value: table.outerHTML, type: "normal" };

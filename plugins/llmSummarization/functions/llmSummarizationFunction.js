@@ -30,8 +30,6 @@ async function runLLMSummarization(context) {
         let title = document.createElement("p");
         title.innerText = "Summaries";
 
-        window.jsonData = result;
-        window.datasetId = datasetId;
         let table = convToHTML(result);
 
         let tmp = { value: table.outerHTML, type: "normal" };
