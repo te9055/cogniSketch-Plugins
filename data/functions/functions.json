@@ -38,18 +38,10 @@
           "settings": {}
         },
         {
-          "id": "multidatasetsFunction",
-          "icon": "/images/palette/icon-json.svg",
-          "icon-alt": "icon-example-function",
-          "label": "Get Mutlidatasets",
-          "nodeColor": "blue",
-          "settings": {}
-        },
-        {
           "id": "datasetsFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
-          "label": "Get Datasets",
+          "label": "Create Dataset",
           "nodeColor": "blue",
           "settings": {}
         },
