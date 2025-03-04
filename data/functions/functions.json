@@ -54,6 +54,14 @@
           "settings": {}
         },
         {
+          "id": "nlpStanceFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get NLP Stance",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
           "id": "concordanceFunction",
           "icon": "/images/palette/icon-json.svg",
           "icon-alt": "icon-example-function",
