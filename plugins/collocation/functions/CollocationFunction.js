@@ -14,7 +14,9 @@ registerNodeExecuteCallback(TYPE_NAME, runCollocation);
 async function runCollocation(context) {
     try {
         //let textProperty = 'boo';
-        let datasetId = context.node.getData().properties['table'].value;
+        //let datasetId = context.node.getData().properties['table'].value;
+        let datasetId = context.node.getData().properties['dataset_id'].value;
+        console.log('datasetId inside collocation: ',datasetId);
         let pos = getPosFromNode(context.node.getPos(), 9, 10);
 
         let response = await fetch("http://127.0.0.1:5000/collocation", {
@@ -31,7 +33,7 @@ async function runCollocation(context) {
         let result = data.output;
 
         let title = document.createElement("p");
-        title.innerText = "Collocations for the word '部' (department)";
+        title.innerText = "Collocations for the word '部' (department) for "+datasetId;
 
         window.jsonData = result;
         let table = convToHTML(result);

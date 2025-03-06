@@ -12,7 +12,9 @@ registerNodeExecuteCallback(TYPE_NAME, runConcrodance);
 
 async function runConcrodance(context) {
     //let textProperty = context.node.getPropertyNamed('text');
-    let textProperty = 'boo';
+    //let textProperty = 'boo';
+    let datasetId = context.node.getData().label;
+
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/concordance", {
         method: 'POST',
@@ -20,7 +22,7 @@ async function runConcrodance(context) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page': textProperty})
+        body: JSON.stringify({'page': datasetId})
     }).then(response => response.text())
         .then((dataStr) => {
                 let data = JSON.parse(dataStr);
