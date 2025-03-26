@@ -68,10 +68,131 @@
 /** Module exports */
 module.exports = {
     "core": {
-        "panes": [ 'canvas', 'table', 'admin', 'help' ],
-        "actions": [ 'email', 'file', 'image', 'text', 'video', 'web', 'json' ],
-        "functions": [ ]
+        "panes": ['canvas', 'table', 'admin', 'help'],
+        "actions": ['email', 'file', 'image', 'text', 'video', 'web', 'json'],
+        "functions": []
     },
-    "paneOrder": [ 'canvas', 'table', 'admin', 'help' ],
-    "plugins": [ ]
+    "paneOrder": ['canvas', 'table', 'admin', 'help'],
+    "plugins": [{
+        'name': 'sentiment',
+        'routes': [
+            { 'root': '/sentiment', 'path': 'sentiment.js' }
+        ],
+        'stylesheets': [ 'sentiment.css' ],
+        'functions': [ 'sentimentFunction' ]
+    },
+        {
+            'name': 'ner',
+            'routes': [
+                { 'root': '/ner', 'path': 'ner.js' }
+            ],
+            'stylesheets': [ 'ner.css' ],
+            'functions': [ 'nerFunction' ]
+        },
+        {
+            'name': 'translate',
+            'routes': [
+                { 'root': '/translate', 'path': 'translate.js' }
+            ],
+            'stylesheets': [ 'translate.css' ],
+            'functions': [ 'translateFunction' ]
+        },
+        {
+            'name': 'collocation',
+            'routes': [
+                { 'root': '/collocation', 'path': 'collocation.js' }
+            ],
+            'stylesheets': [ 'collocation.css' ],
+            'functions': [ 'collocationFunction' ]
+        },
+        {
+            'name': 'concordance',
+            'routes': [
+                { 'root': '/concordance', 'path': 'concordance.js' }
+            ],
+            'stylesheets': [ 'concordance.css' ],
+            'functions': [ 'concordanceFunction' ]
+        },
+        {
+            'name': 'multidatasets',
+            'routes': [
+                { 'root': '/multidatasets', 'path': 'multidatasets.js' }
+            ],
+            'stylesheets': [ 'multidatasets.css' ],
+            'functions': [ 'multidatasetsFunction' ]
+        },
+        {
+            'name': 'datasets',
+            'routes': [
+                { 'root': '/datasets', 'path': 'datasets.js' }
+            ],
+            'stylesheets': [ 'datasets.css' ],
+            'functions': [ 'datasetsFunction' ]
+        },
+        {
+            'name': 'llmSummarization',
+            'routes': [
+                { 'root': '/llmSummarization', 'path': 'llmSummarization.js' }
+            ],
+            'stylesheets': [ 'llmSummarization.css' ],
+            'functions': [ 'llmSummarizationFunction' ]
+        },
+        {
+            'name': 'topicExtraction',
+            'routes': [
+                { 'root': '/topicExtraction', 'path': 'topicExtraction.js' }
+            ],
+            'stylesheets': [ 'topicExtraction.css' ],
+            'functions': [ 'topicExtractionFunction' ]
+        },
+        {
+            'name': 'usas',
+            'routes': [
+                { 'root': '/usas', 'path': 'usas.js' }
+            ],
+            'stylesheets': [ 'usas.css' ],
+            'functions': [ 'usasFunction' ]
+        },
+        {
+            'name': 'neroverall',
+            'routes': [
+                { 'root': '/neroverall', 'path': 'neroverall.js' }
+            ],
+            'stylesheets': [ 'neroverall.css' ],
+            'functions': [ 'neroverallFunction' ]
+        },
+        {
+            'name': 'usasFine',
+            'routes': [
+                { 'root': '/usasFine', 'path': 'usasFine.js' }
+            ],
+            'stylesheets': [ 'usasFine.css' ],
+            'functions': [ 'usasFineFunction' ]
+        },
+        {
+            'name': 'nlpStance',
+            'routes': [
+                { 'root': '/nlpStance', 'path': 'nlpStance.js' }
+            ],
+            'stylesheets': [ 'nlpStance.css' ],
+            'functions': [ 'nlpStanceFunction' ]
+        },
+        {
+            'name': 'testfunc',
+            'routes': [
+                { 'root': '/testfunc', 'path': 'testfunc.js' }
+            ],
+            'stylesheets': [ 'testfunc.css' ],
+            'functions': [ 'testfunc' ]
+        },
+        {
+            'name': 'generateCSV',
+            'routes': [
+                { 'root': '/generateCSV', 'path': 'generateCSV.js' }
+            ],
+            'stylesheets': [ 'generateCSV.css' ],
+            'functions': [ 'generateCSV' ]
+        }
+
+    ]
 };

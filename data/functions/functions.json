@@ -1,1 +1,98 @@
-[]
+
+  {
+    "basic": {
+      "id": "func-basic",
+      "position": 1,
+      "label": "Basic",
+      "items": [
+        {
+          "id": "sentimentFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Sentiment Analysis (Sentences)",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "usasFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "USAS",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "translateFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Translation",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "collocationFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Collocations",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "datasetsFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Create Dataset",
+          "nodeColor": "blue",
+          "settings": {}
+        },
+        {
+          "id": "llmSummarizationFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Summarize documents",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "topicExtractionFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Extract Topics from Summaries",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "neroverallFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get NER overall",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "nlpStanceFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get NLP Stance",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "concordanceFunction",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Get Concordances",
+          "nodeColor": "red",
+          "settings": {}
+        },
+        {
+          "id": "generateCSV",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Generate CSV",
+          "nodeColor": "red",
+          "settings": {}
+        }
+      ]
+    }
+  }

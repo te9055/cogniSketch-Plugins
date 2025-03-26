@@ -1,0 +1,9 @@
+/*
+ * @file CSS definitions for the plugin 'example' pane.
+ * @author Dave Braines
+ * @status Complete
+*/
+
+.cs-example-property-name {
+    width: 100px;
+}

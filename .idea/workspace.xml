@@ -4,13 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="" />
+    <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="demo time">
+      <change afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunctionB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/functions/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/panes/generateCSV/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/panes/generateCSV/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/routes/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/stylesheets/generateCSV.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/typedefs/defs_example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dynamic-datasets" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -32,26 +65,70 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2fkiWwIbLJEsgZUEBZPhg7iZXH9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "application.passwordSafe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Node.js.TranslateFunction.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.Start Cogni.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;demo-branch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/generateCSV&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/tom/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/generateCSV" />
+      <recent name="$PROJECT_DIR$/plugins/datasets" />
+      <recent name="$PROJECT_DIR$/plugins/collocation/functions" />
+      <recent name="$PROJECT_DIR$/plugins/usas/functions" />
+      <recent name="$PROJECT_DIR$/plugins/neroverall/functions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/multidatasets/panes" />
+      <recent name="$PROJECT_DIR$/plugins/multidatasets/panes/multidatasets" />
+      <recent name="$PROJECT_DIR$/plugins" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.Start Cogni">
+    <configuration name="TranslateFunction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/plugins/translate/functions/TranslateFunction.js" working-dir="$PROJECT_DIR$/plugins/translate/functions">
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Cogni" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="pm2 start bin/www_local -f" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -62,12 +139,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.TranslateFunction.js" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Shell Script.Start Cogni" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.TranslateFunction.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
-        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -84,11 +170,228 @@
       <workItem from="1714429110154" duration="1185000" />
       <workItem from="1714551382116" duration="10327000" />
       <workItem from="1715588505195" duration="874000" />
-      <workItem from="1718114797299" duration="46000" />
+      <workItem from="1715673976893" duration="359000" />
+      <workItem from="1715674425058" duration="57000" />
+      <workItem from="1715674586281" duration="9126000" />
+      <workItem from="1716286799231" duration="2391000" />
+      <workItem from="1716892619142" duration="24880000" />
+      <workItem from="1718361142880" duration="24000" />
+      <workItem from="1718616675647" duration="2000" />
+      <workItem from="1718702897301" duration="6029000" />
+      <workItem from="1719515821283" duration="720000" />
+      <workItem from="1719609938913" duration="6000" />
+      <workItem from="1719826532375" duration="22000" />
+      <workItem from="1719829800417" duration="3906000" />
+      <workItem from="1719916946387" duration="26000" />
+      <workItem from="1719919558414" duration="2323000" />
+      <workItem from="1719989898514" duration="552000" />
+      <workItem from="1720103151832" duration="80000" />
+      <workItem from="1720170535853" duration="599000" />
+      <workItem from="1723620683431" duration="505000" />
+      <workItem from="1724242308098" duration="466000" />
+      <workItem from="1724259903395" duration="8704000" />
+      <workItem from="1727086140317" duration="1128000" />
+      <workItem from="1727087360251" duration="3413000" />
+      <workItem from="1727093870548" duration="2377000" />
+      <workItem from="1727098755950" duration="1414000" />
+      <workItem from="1727100252968" duration="253000" />
+      <workItem from="1727100630395" duration="197000" />
+      <workItem from="1727100883630" duration="4346000" />
+      <workItem from="1727152509197" duration="3049000" />
+      <workItem from="1728475458384" duration="2903000" />
+      <workItem from="1730899988500" duration="8283000" />
+      <workItem from="1731404340789" duration="2718000" />
+      <workItem from="1731505496605" duration="4803000" />
+      <workItem from="1731870847760" duration="6898000" />
+      <workItem from="1732110606402" duration="13153000" />
+      <workItem from="1732199267917" duration="3319000" />
+      <workItem from="1732273901431" duration="15480000" />
+      <workItem from="1732700891330" duration="12402000" />
+      <workItem from="1733219198630" duration="8245000" />
+      <workItem from="1733229685589" duration="5807000" />
+      <workItem from="1733740449512" duration="1784000" />
+      <workItem from="1733747238018" duration="6164000" />
+      <workItem from="1733754390284" duration="14716000" />
+      <workItem from="1733833465060" duration="937000" />
+      <workItem from="1733834928422" duration="14331000" />
+      <workItem from="1734186417927" duration="13303000" />
+      <workItem from="1734345250891" duration="154000" />
+      <workItem from="1734345566428" duration="717000" />
+      <workItem from="1734346413224" duration="2297000" />
+      <workItem from="1734350350813" duration="10000" />
+      <workItem from="1734350415019" duration="1039000" />
+      <workItem from="1734387127277" duration="14689000" />
+      <workItem from="1734406038398" duration="1580000" />
+      <workItem from="1734407936385" duration="7605000" />
+      <workItem from="1736325881187" duration="11624000" />
+      <workItem from="1736776521975" duration="15773000" />
+      <workItem from="1736950007929" duration="3955000" />
+      <workItem from="1737020948464" duration="6827000" />
+      <workItem from="1737028067939" duration="45731000" />
+      <workItem from="1738202949955" duration="17245000" />
+      <workItem from="1738326683848" duration="235000" />
+      <workItem from="1738327214939" duration="9229000" />
+      <workItem from="1738583808093" duration="3008000" />
+      <workItem from="1738587161987" duration="4912000" />
+      <workItem from="1738608080298" duration="4014000" />
+      <workItem from="1738749514304" duration="1644000" />
+      <workItem from="1739183663743" duration="15363000" />
+      <workItem from="1739268924282" duration="6967000" />
+      <workItem from="1739361271047" duration="1202000" />
+      <workItem from="1739362557274" duration="3345000" />
+      <workItem from="1739366055450" duration="2418000" />
+      <workItem from="1739368553454" duration="1374000" />
+      <workItem from="1739370447268" duration="1734000" />
+      <workItem from="1739372203990" duration="5000" />
+      <workItem from="1739442984906" duration="6800000" />
+      <workItem from="1739455613788" duration="36821000" />
+      <workItem from="1739972412595" duration="2676000" />
+      <workItem from="1739975634014" duration="9355000" />
+      <workItem from="1740486371337" duration="9220000" />
+      <workItem from="1740517222062" duration="6533000" />
+      <workItem from="1740563759792" duration="84280000" />
+      <workItem from="1741255375824" duration="8391000" />
+      <workItem from="1741602335413" duration="5651000" />
+      <workItem from="1742041279983" duration="1442000" />
+      <workItem from="1742550851912" duration="95000" />
+      <workItem from="1742550949429" duration="19472000" />
+      <workItem from="1742626031538" duration="6728000" />
+      <workItem from="1742808113509" duration="13375000" />
+      <workItem from="1742909935207" duration="873000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1715674103027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674103027</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1718355817780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718355817780</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added sentiment Analysis">
+      <option name="closed" value="true" />
+      <created>1727089527893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727089527893</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adds Sentiment Analysis + Translation + NER + USAS">
+      <option name="closed" value="true" />
+      <created>1727118569603</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727118569603</updated>
+    </task>
+    <task id="LOCAL-00005" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1731838557112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731838557112</updated>
+    </task>
+    <task id="LOCAL-00006" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1731839243472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731839243472</updated>
+    </task>
+    <task id="LOCAL-00007" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1732627804580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732627804580</updated>
+    </task>
+    <task id="LOCAL-00008" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1734089181114</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734089181114</updated>
+    </task>
+    <task id="LOCAL-00009" summary="work towards concordence and collocaion">
+      <option name="closed" value="true" />
+      <created>1734397719119</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734397719119</updated>
+    </task>
+    <task id="LOCAL-00010" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1734440162813</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734440162813</updated>
+    </task>
+    <task id="LOCAL-00011" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1740576443382</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740576443382</updated>
+    </task>
+    <task id="LOCAL-00012" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1741091133560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741091133560</updated>
+    </task>
+    <task id="LOCAL-00013" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1741091259903</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741091259903</updated>
+    </task>
+    <task id="LOCAL-00014" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1741256157399</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741256157399</updated>
+    </task>
+    <task id="LOCAL-00015" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1741263769318</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741263769318</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Added sentiment Analysis" />
+    <MESSAGE value="Adds Sentiment Analysis + Translation + NER + USAS" />
+    <MESSAGE value="work towards concordence and collocaion" />
+    <MESSAGE value="demo time" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo time" />
   </component>
 </project>
