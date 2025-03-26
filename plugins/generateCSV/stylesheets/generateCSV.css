@@ -1,0 +1,22 @@
+tr:nth-child(even) {
+    background-color: #FBCEB1;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+th{
+    background-color: #FF7518;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+button {
+    position: relative;
+    z-index: 10;  /* Ensure button is on top */
+    pointer-events: auto;  /* Ensure the button can be clicked */
+}

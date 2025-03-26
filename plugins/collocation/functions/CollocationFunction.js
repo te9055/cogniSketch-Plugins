@@ -2,7 +2,7 @@ import {registerNodeExecuteCallback} from "/javascripts/interface/callbackFuncti
 import {getPalette} from "/javascripts/private/state.js";
 import {getPosFromNode} from "/javascripts/interface/graphics.js";
 import {createNewFullNode, createNewLink} from "/javascripts/private/core/create.js";
-//import {testfuncollocation} from "/plugins/collocation/functions/testFcollocation.js";
+import {testfuncollocation} from "/plugins/collocation/functions/testFcollocation.js";
 
 
 
@@ -13,36 +13,50 @@ registerNodeExecuteCallback(TYPE_NAME, runCollocation);
 
 async function runCollocation(context) {
     try {
-        //let textProperty = 'boo';
-        //let datasetId = context.node.getData().properties['table'].value;
         let datasetId = context.node.getData().properties['dataset_id'].value;
-        console.log('datasetId inside collocation: ',datasetId);
-        let pos = getPosFromNode(context.node.getPos(), 9, 10);
+        //console.log('datasetId inside collocation: ',datasetId);
+        // Create a container to append input and button elements
+        const container = document.createElement('div');
+        //container.id = 'collocation-container'; // optional ID for styling or reference
+        container.id = `collocation-container-${datasetId}`; // Unique container ID
 
-        let response = await fetch("http://127.0.0.1:5000/collocation", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ 'page': datasetId})
-        });
+        container.style.margin = '10px'; // Add some margin or style if needed
 
-        let dataStr = await response.text();
-        let data = JSON.parse(dataStr);
-        let result = data.output;
+        // Create input box
+        const inputBox = document.createElement('input');
+        inputBox.type = 'text';
+        inputBox.placeholder = 'Type a word...'; // Placeholder text
+        //inputBox.id = 'collocation-input';
+        inputBox.id = `collocation-input-${datasetId}`; // Unique input box ID tied to the dataset
+        inputBox.style.marginRight = '10px'; // Add spacing between input and button
+        inputBox.style.padding = '5px'; // Add some padding inside the input box
+        inputBox.style.pointerEvents = 'auto';
+        //window.inputBox = inputBox;
 
+        container.appendChild(inputBox); // Append the input box to the container
+
+
+        //window.inputValue = inputBox.value;
+        //console.log('inputValue before: ', inputValue);
+        let submitButtonContainer = document.createElement("div");
+        // Use innerHTML to create the button and attach the onclick function
+        submitButtonContainer.innerHTML = `
+        <button class="cs-allow-clicks" onclick="window.handleAButtonClick('${datasetId}')">
+            Submit
+        </button>
+    `;
+
+        // Append input and button to container
+        //container.appendChild(inputBox);
+        container.appendChild(submitButtonContainer);
         let title = document.createElement("p");
-        title.innerText = "Collocations for the word '部' (department) for "+datasetId;
-
-        window.jsonData = result;
-        let table = convToHTML(result);
-
+        title.innerText = "Provide a word for collocation analysis";
+        document.body.appendChild(container);
         document.body.appendChild(title);
-        document.body.appendChild(table);
 
-
-        let tmp = { value: table.outerHTML, type: "normal" };
+        let pos = getPosFromNode(context.node.getPos(), 9, 10);
+        //console.log("pos: ", pos);
+        let tmp = { value: container.outerHTML, type: "normal" };
         let nodeType = getPalette().getItemById('table');
 
         let desNode = createNewFullNode(nodeType, title.outerHTML, {
@@ -51,73 +65,25 @@ async function runCollocation(context) {
         }, null, { "table": tmp });
 
         let srcNode = context.node;
+        window.desNode = desNode;
         createNewLink(srcNode, desNode);
 
-        window.desNode = desNode;
-
-        //console.log("Node and link created");
 
     } catch (err) {
         console.error("Error during runCollocation:", err);
     }
 }
 
-function convToHTML(jsonData) {
-
-    let table =  document.createElement("table");
-    let cols = ["Collocate", "LogRatio","Frequency"];
-
-    let thead = document.createElement("thead");
-    let tr = document.createElement("tr");
-
-    cols.forEach((item) => {
-        let th = document.createElement("th");
-        th.innerText = item;
-        tr.appendChild(th);
-    });
-
-    thead.appendChild(tr);
-    table.appendChild(thead);
-
-    let tbody = document.createElement("tbody");
-
-    jsonData.forEach((item, index) => {
-        let tr = document.createElement("tr");
-
-        let vals = Object.values(item);
-        vals.forEach((elem) => {
-            let td = document.createElement("td");
-            td.innerText = elem;
-            tr.appendChild(td);
-        });
-
-        // Add button using innerHTML with globally accessible onclick function
-        //let td = document.createElement("td");
-        //td.innerHTML = `<button class="cs-allow-clicks" onclick="window.handleButtonClickColloc(${index})">Expand</button>`;
-        //tr.appendChild(td);
-
-        tbody.appendChild(tr);
-    });
-
-    table.appendChild(tbody);
-    return table;
+window.handleAButtonClick = function (datasetId) {
+    //console.log('button clicked')
+    console.log('datasetId: ', datasetId);
+    // Dynamically fetch the input value from inputBox
+    //const inputBox = document.querySelector('#collocation-input');
+    const inputBox = document.querySelector(`#collocation-input-${datasetId}`);
+    const inputValue = inputBox ? inputBox.value : null;
+    //console.log('inputValue: ', inputValue);
+    //console.log("DesNode:", window.desNode);
+    testfuncollocation(datasetId,inputValue,window.desNode)
 
 
-}
-
-/*
-window.handleButtonClickColloc = function (index) {
-    if (window.jsonData) {
-        let rowData = window.jsonData[index];
-        console.log("Row data:", rowData);
-
-
-        if (window.desNode) {
-            console.log("DesNode:", window.desNode);
-            testfuncollocation(rowData, window.desNode); // Pass desNode to testfun
-        } else {
-            console.log("desNode is not available yet.");
-        }
-    }
 };
-*/

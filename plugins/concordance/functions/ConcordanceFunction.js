@@ -13,7 +13,20 @@ registerNodeExecuteCallback(TYPE_NAME, runConcrodance);
 async function runConcrodance(context) {
     //let textProperty = context.node.getPropertyNamed('text');
     //let textProperty = 'boo';
-    let datasetId = context.node.getData().label;
+
+
+    let datatopass = context.node.getData().label;
+    let extractedWord = ''
+    console.log('node getdata: ',datatopass);
+    const match = datatopass.match(/<p>Collocations for (\w+) for dataset node-/);
+    if (match && match[1]) {
+        extractedWord = match[1];
+        console.log('Extracted word:', extractedWord); // Output: "ministry"
+    } else {
+        console.error('Word not found');
+    }
+
+
 
     let pos = getPosFromNode(context.node.getPos(),9,10);
     await fetch("http://127.0.0.1:5000/concordance", {
@@ -22,14 +35,15 @@ async function runConcrodance(context) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'page': datasetId})
+        body: JSON.stringify({'page': datatopass})
+
     }).then(response => response.text())
         .then((dataStr) => {
                 let data = JSON.parse(dataStr);
                 return data.output;
             }
         ).then(result => {
-            let title = document.createElement("p").innerText = "Concordance for the word '部' (department)";
+            let title = document.createElement("p").innerText = "Concordance for the word "+extractedWord;
             let tableres = convToHTML(result)
             tableres.prepend(title)
             let tmp = Object();

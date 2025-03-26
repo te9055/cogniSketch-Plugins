@@ -84,6 +84,14 @@
           "label": "Get Concordances",
           "nodeColor": "red",
           "settings": {}
+        },
+        {
+          "id": "generateCSV",
+          "icon": "/images/palette/icon-json.svg",
+          "icon-alt": "icon-example-function",
+          "label": "Generate CSV",
+          "nodeColor": "red",
+          "settings": {}
         }
       ]
     }

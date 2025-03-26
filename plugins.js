@@ -184,6 +184,14 @@ module.exports = {
             ],
             'stylesheets': [ 'testfunc.css' ],
             'functions': [ 'testfunc' ]
+        },
+        {
+            'name': 'generateCSV',
+            'routes': [
+                { 'root': '/generateCSV', 'path': 'generateCSV.js' }
+            ],
+            'stylesheets': [ 'generateCSV.css' ],
+            'functions': [ 'generateCSV' ]
         }
 
     ]

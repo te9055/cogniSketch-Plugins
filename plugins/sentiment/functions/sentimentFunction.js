@@ -16,6 +16,42 @@ async function runSentimentAnal(context) {
     let datasetId = context.node.getData().properties['table'].value;
 
     let pos = getPosFromNode(context.node.getPos(),9,10);
+
+    let response = await fetch("http://127.0.0.1:5000/sentiment", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 'page': datasetId })
+    });
+
+    let dataStr = await response.text();
+    let data = JSON.parse(dataStr);
+    let result = data.output;
+
+    let title = document.createElement("p");
+    title.innerText = "Sentiment Analysis (Sentences)";
+
+    let table = convToHTML(result);
+    console.log('table: ',table);
+
+    document.body.appendChild(title);
+    document.body.appendChild(table);
+
+    let tmp = { value: table.outerHTML, type: "normal" };
+    let nodeType = getPalette().getItemById('table');
+
+    let desNode = createNewFullNode(nodeType, title.outerHTML, {
+        x: pos.x + 250,
+        y: pos.y - 50
+    }, null, {"table": tmp, "dataset_id": { value: context.node.getPropertyNamed('dataset_id'), type: "normal" }});
+
+    let srcNode = context.node;
+    createNewLink(srcNode, desNode);
+
+
+    /*
     await fetch("http://127.0.0.1:5000/sentiment", {
         method: 'POST',
         headers: {
@@ -45,6 +81,8 @@ async function runSentimentAnal(context) {
 
             let srcNode = context.node
             createNewLink(srcNode, desNode) });
+
+     */
 }
 
 function convToHTML(jsonData) {

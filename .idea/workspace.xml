@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b5a65b-2294-4c7e-a3a8-7010b0999e60" name="Changes" comment="demo time">
+      <change afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunctionB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/functions/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/images/icon-export.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/images/icon-import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/panes/generateCSV/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/panes/generateCSV/templates/examplePaneTemplates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/routes/generateCSV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/stylesheets/generateCSV.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/generateCSV/typedefs/defs_example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/functions/functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions/functions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/CollocationFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/collocation/functions/testFcollocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/concordance/functions/ConcordanceFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/sentiment/functions/sentimentFunction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +79,12 @@
     &quot;Node.js.TranslateFunction.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.Start Cogni.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;demo-branch&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/datasets&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tom/WebstormProjects/cogni-sketch/plugins/generateCSV&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,11 +98,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/generateCSV" />
       <recent name="$PROJECT_DIR$/plugins/datasets" />
       <recent name="$PROJECT_DIR$/plugins/collocation/functions" />
       <recent name="$PROJECT_DIR$/plugins/usas/functions" />
       <recent name="$PROJECT_DIR$/plugins/neroverall/functions" />
-      <recent name="$PROJECT_DIR$/plugins/testfunc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plugins/multidatasets/panes" />
@@ -135,7 +153,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -232,7 +250,14 @@
       <workItem from="1740486371337" duration="9220000" />
       <workItem from="1740517222062" duration="6533000" />
       <workItem from="1740563759792" duration="84280000" />
-      <workItem from="1741255375824" duration="5566000" />
+      <workItem from="1741255375824" duration="8391000" />
+      <workItem from="1741602335413" duration="5651000" />
+      <workItem from="1742041279983" duration="1442000" />
+      <workItem from="1742550851912" duration="95000" />
+      <workItem from="1742550949429" duration="19472000" />
+      <workItem from="1742626031538" duration="6728000" />
+      <workItem from="1742808113509" duration="13375000" />
+      <workItem from="1742909935207" duration="873000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -346,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741256157399</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="demo time">
+      <option name="closed" value="true" />
+      <created>1741263769318</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741263769318</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
