@@ -55,7 +55,7 @@ export async function testfuncollocation(datasetId,inputValue,nodesrc) {
 function convToHTML(jsonData) {
 
     let table =  document.createElement("table");
-    let cols = ["Preceded By", "Term", "Followed By"];
+    let cols = ["Collocate", "Log Ratio", "Frequency"];
 
     let thead = document.createElement("thead");
     let tr = document.createElement("tr");
